@@ -18,23 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46A-Xa-56N">
-                                <rect key="frame" x="142" y="323" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46A-Xa-56N">
+                                <rect key="frame" x="121" y="102" width="133" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-Rb-LWp">
+                                <rect key="frame" x="130" y="345" width="115" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppn-2a-7EF">
+                                <rect key="frame" x="151" y="279" width="73" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="ボタン"/>
+                                <connections>
+                                    <action selector="tapHandle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fr9-e1-01N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="46A-Xa-56N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ILV-xq-epW"/>
+                            <constraint firstItem="46A-Xa-56N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-200.5" id="ILV-xq-epW"/>
+                            <constraint firstItem="Pmx-Rb-LWp" firstAttribute="top" secondItem="ppn-2a-7EF" secondAttribute="bottom" constant="25" id="VOS-dQ-vwy"/>
+                            <constraint firstItem="ppn-2a-7EF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VhH-9Y-Vl6"/>
+                            <constraint firstItem="Pmx-Rb-LWp" firstAttribute="centerX" secondItem="ppn-2a-7EF" secondAttribute="centerX" id="bjI-ZO-fBm"/>
+                            <constraint firstItem="ppn-2a-7EF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-34" id="sGJ-pK-xxw"/>
+                            <constraint firstItem="Pmx-Rb-LWp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="umb-av-j3O"/>
                             <constraint firstItem="46A-Xa-56N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wEF-hl-lCa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="Pmx-Rb-LWp" id="SyN-DD-rNf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
